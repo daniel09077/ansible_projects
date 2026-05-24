@@ -1,0 +1,55 @@
+# ==========================================
+# Ansible Specific
+# ==========================================
+# Playbook retry files (created automatically on failure)
+*.retry
+
+# Local vault password files (never commit plain-text passwords)
+.vault_pass
+.vault-password
+vault-password.txt
+*.pass
+*.passwd
+
+# Local Ansible collection and role dependencies
+# (Install these via requirements.yml instead)
+collections/
+roles/external/
+roles/galaxy/
+
+# Local cache and temporary execution data
+.ansible/
+*.log
+ansible-fact-cache/
+
+# ==========================================
+# Credentials & Keys
+# ==========================================
+# Private keys used for SSH or API access
+*.pem
+*.key
+*.pub
+id_rsa
+id_ecdsa
+id_ed25519
+
+# Environment files containing secrets
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Python & OS Artifacts
+# ==========================================
+# Python compiled bytecode and environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db
