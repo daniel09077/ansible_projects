@@ -1,0 +1,52 @@
+all:
+  children:
+
+        NOVA-region: #region
+            children:
+              NOVA-1a: #AZ ONE
+                children:
+                  webservers:
+                    hosts: # lists of servers
+                      front-end-nova-1: 
+                        ansible_host: 10.23.67.32
+                  bastion:
+                    hosts: #lists of servers
+                      bastion-nova-1: 
+                        ansible_host: 10.23.67.32
+                  
+              NOVA-1b: #AZ TWO
+                children:
+                  webservers:
+                    hosts: #lists of servers
+                      front-end-nova-2: 
+                        ansible_host: 10.23.67.32
+                  bastion:
+                    hosts: #lists of servers
+                      bastion-nova-2: 
+                        ansible_host: 10.23.67.32
+                
+        OHIO-region: #region
+            children:
+              OHIO-1a: #AZ ONE
+                children:
+                  webservers:
+                    hosts: #servers under the AZ ONE of the OHIO region
+                      front-end-ohio-1: 
+                        ansible_host: 10.23.67.32
+                  bastion:
+                    hosts: #lists of servers
+                      bastion-ohio-1: 
+                        ansible_host: 10.23.67.32
+                  
+              OHIO-1b: #AZ TWO
+                children:
+                  webservers:
+                    hosts: #servers under the AZ TWO of the OHIO region
+                      front-end-ohio-2: 
+                        ansible_host: 10.23.67.32
+                  bastion:
+                    hosts: #lists of servers
+                      bastion-ohio-2: 
+                        ansible_host: 10.23.67.32
+                  
+     

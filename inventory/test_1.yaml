@@ -1,0 +1,31 @@
+all: #GLOBAL Parent
+  children:
+    webservers:
+     
+      children:
+        nigeria: #REGION PARENT
+            hosts:
+              web1_nigeria:
+                ansible_host: op.com
+              web2_nigeria:
+                ansible_host: df.com
+        europe: #REGION PARENT
+                hosts:
+                  web1_europe:
+                    ansible_host: lo.com
+                  web2_europe:
+                    ansible_host: pl.com
+                
+    dbservers:
+      children:
+        nigeria: #REGION PARENT
+              hosts:
+                db_nigeria:
+                  ansible_host: er.com
+
+        europe: #REGION PARENT
+                hosts:
+                  db_europe:
+                    ansible_host: re.com
+           
+
